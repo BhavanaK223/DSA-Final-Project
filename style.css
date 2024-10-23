@@ -13,7 +13,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 10px 100px;
     display: flex;
     justify-content: space-between;
     background-color: #786F9E;
@@ -39,7 +39,6 @@ nav a:hover{
 }
 
 /* MAIN */
-
 body{
     background-color: #413C58;
     color: white;
@@ -60,9 +59,14 @@ section{
     align-items: center;
     justify-content: center;
 }
-.searchSection h1{
-    margin: 0 20px;
-    padding: 0 20px;
+.searchSection h2{
+    margin: 0 20px 20px;
+}
+.searchSection p{
+    margin: 0 30px 10px;
+}
+.searchSection button{
+    margin: 4em 0 0;
 }
 
 /*Edit Data Page*/
@@ -122,19 +126,17 @@ input[type="text"]{
 }
 
 
-
 /* BUTTONS */
 button{
     padding: 10px 20px;
     margin: 10px;
-    border: none;
+    border: 2px dashed transparent;
     border-radius: 1em;
     height: 3.5em;
     cursor: pointer;
     background-color: #96E078;
     transition: 0.1s;
     font-weight: bold;
-    
 }
 
  button:hover{
