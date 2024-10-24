@@ -26,35 +26,22 @@
         <button type= "button" id="insertToggle" class="insertToggle">Insert</button>
         <button type= "button" id="deleteToggle" class="deleteToggle">Delete</button>
         </section>
-    <section id="insertSection" class="hidden">
+    <section id="inputSection" class="hidden">
         <div>
             <label for="county">County:</label>
-            <input type="text" id="countyInsert" name="county"  placeholder="Alachua">
+            <input type="text" id="county" name="county"  placeholder="Alachua">
             <label for="state">State:</label>
-            <input type="text" id="stateInsert" name="state"  placeholder="Florida">
-            <button type= "submit" id="insert">Insert</button>
+            <input type="text" id="state" name="state"  placeholder="Florida">
+            <button type= "submit" id="insert" class="InsertButton">Insert</button>
+            <button type= "submit" id="delete" class="DeleteButton">Delete</button> 
          </div>
         <div>
             <label for="date">Date:</label>
-            <input type="text" id="dateInsert" name="date"  placeholder="MM/DD/YYYY">
-            <label for="aqiInsert">AQI:</label>
-            <input type="text" id="aqiInsert" name="aqi"  placeholder="0.1">  
-        </div>    
-    </section>
-     <section id="deleteSection" class="hidden">
-        <div>
-            <label for="county">County:</label>
-            <input type="text" id="countyDelete" name="county"  placeholder="Alachua">
-            <label for="state">State:</label>
-            <input type="text" id="stateDelete" name="state"  placeholder="Florida">
-            <button type= "submit" id="delete">Delete</button>
+            <input type="text" id="date" name="date"  placeholder="MM/DD/YYYY">
+            <label for="aqi">AQI:</label>
+            <input type="text" id="aqi" name="aqi"  placeholder="0.1">  
         </div>
-        <div>
-            <label for="date">Date:</label>
-            <input type="text" id="dateDelete" name="date"  placeholder="MM/DD/YYYY">
-            <label for="aqiDelete">AQI:</label>
-            <input type="text" id="aqiDelete" name="aqiDelete"  placeholder="0.1">         
-        </div>
+   
     </section>
     <script src="dataEdit.js"></script>
 </main>

@@ -7,46 +7,40 @@ document.addEventListener('DOMContentLoaded',()=>{
     //buttons and sections
     const toggleInsert = document.getElementById('insertToggle');
     const toggleDelete = document.getElementById('deleteToggle');
-    const insertSect = document.getElementById('insertSection');
-    const deleteSect = document.getElementById('deleteSection');
+    const insertButton = document.getElementById('insert');
+    const deleteButton = document.getElementById('delete');
+    const inputSect = document.getElementById('inputSection');
+    
+    //Debug
+    console.log(toggleInsert, toggleDelete);
 
-    //Check if the elements are found
-    console.log(toggleInsert, toggleDelete, insertSect, deleteSect);
+    //Functions
+    function InsertInput(insertToggle, deleteToggle, insertButton, deleteButton){  
+        //Toggles
+        insertToggle.classList.add('active');
+        deleteToggle.classList.remove('active');
+        //Buttons
+        insertButton.classList.remove('hidden');
+        deleteButton.classList.add('hidden');
 
-    // function showSection(button, sectionToShow, otherButton, otherSection){
-    //     console.log("button clicked: ${button.id}");//Debugging
-
-    //     otherSection.classList.add('hidden');
-    //     otherButton.classList.remove('active');
-
-    //     sectionToShow.classList.remove('hidden');
-    //     button.classList.add('active');
-    // }
-
-    function showInsert(toggleInsert, insertSect, toggleDelete, deleteSect){
-        insertSect.classList.remove('hidden');
-        insertSect.classList.add('Insertion');
-        deleteSect.classList.add('hidden');
-        deleteSect.classList.remove('Deletion');
-
-        toggleInsert.classList.add('active');
-        toggleDelete.classList.remove('active');
+    }
+    function DeleteInput(deleteToggle, insertToggle, insertButton, deleteButton){
+        //Toggles
+        deleteToggle.classList.add('active');
+        insertToggle.classList.remove('active');
+        //Buttons
+        deleteButton.classList.remove('hidden');
+        insertButton.classList.add('hidden');
     }
 
-    function showDelete(toggleDelete, deleteSect, toggleInsert, insertSect){
-        deleteSect.classList.remove('hidden');
-        deleteSect.classList.add('Deletion');
-        insertSect.classList.add('hidden');
-        insertSect.classList.remove('Insertion');
-
-        toggleDelete.classList.add('active');
-        toggleInsert.classList.remove('active');
-    }
-
+    //Event
     toggleInsert.addEventListener('click',()=>{
-        showInsert(toggleInsert, insertSect, toggleDelete, deleteSect);
+        InsertInput(toggleInsert, toggleDelete, insertButton, deleteButton);
+        inputSect.classList.add('dataInputSection');
     });
     toggleDelete.addEventListener('click',()=>{
-        showDelete(toggleDelete, deleteSect, toggleInsert, insertSect);
+        DeleteInput(toggleDelete, toggleInsert, insertButton, deleteButton);
+        inputSect.classList.add('dataInputSection');
     });
+
 });

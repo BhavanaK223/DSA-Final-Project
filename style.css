@@ -76,26 +76,16 @@ section{
 .ChangeType{
     padding: 1em 40px 2em;
 }
-/*Insert Section*/
-.Insertion{
+.dataInputSection{
     display: flex;
     justify-content: center;
     padding: 0 20px 0;
 }
-.Insertion label{
+.dataInputSection label{
     margin: 25px 20px 0px;
     padding: 5px 10px;
 }
-/*Delete Section*/
-.Deletion{
-    display: flex;
-    justify-content: center;
-    padding: 0 20px 0;
-}
-.Deletion label{
-    margin: 25px 20px 0px;
-    padding: 5px 10px;
-}
+
 
 
 /*=====> REFERENCE PAGE <======*/
@@ -149,8 +139,7 @@ button{
 
 .deleteToggle{
     background-color: #F24822;
-    color: white;
-    
+    color: white; 
 }
 
 .deleteToggle.active{
@@ -165,17 +154,13 @@ button{
     border: 2px dashed #96E078;
 }
 
-.Insertion button{
+.dataInputSection button{
     margin: 10px 20px 25px;
 }
-.Deletion button{
+.DeleteButton{
     margin: 10px 20px 25px;
     background-color: #F24822;
     color: white;
-}
-
-.Deletion button:hover{
-    background-color: #FFA629;
 }
 
 
