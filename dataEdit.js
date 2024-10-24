@@ -1,7 +1,6 @@
 // Purpose: This file is used to toggle between the insert and delete sections of the data edit page
-//React mui
+//React MUI
 //API QUESTIOn Discord
-/* ---Remove REDUNANCY: bc input for edit data same, make it one section and change the button */
 
 document.addEventListener('DOMContentLoaded',()=>{ 
     //buttons and sections
@@ -15,31 +14,22 @@ document.addEventListener('DOMContentLoaded',()=>{
     console.log(toggleInsert, toggleDelete);
 
     //Functions
-    function InsertInput(insertToggle, deleteToggle, insertButton, deleteButton){  
-        //Toggles
-        insertToggle.classList.add('active');
-        deleteToggle.classList.remove('active');
-        //Buttons
-        insertButton.classList.remove('hidden');
-        deleteButton.classList.add('hidden');
-
-    }
-    function DeleteInput(deleteToggle, insertToggle, insertButton, deleteButton){
-        //Toggles
-        deleteToggle.classList.add('active');
-        insertToggle.classList.remove('active');
-        //Buttons
-        deleteButton.classList.remove('hidden');
-        insertButton.classList.add('hidden');
+    function changeEdit(toggle1, toggle2, button1, button2){
+        //toggles
+        toggle1.classList.add('active');
+        toggle2.classList.remove('active');
+        //buttons
+        button1.classList.remove('hidden');
+        button2.classList.add('hidden');
     }
 
     //Event
     toggleInsert.addEventListener('click',()=>{
-        InsertInput(toggleInsert, toggleDelete, insertButton, deleteButton);
+        changeEdit(toggleInsert, toggleDelete, insertButton, deleteButton);
         inputSect.classList.add('dataInputSection');
     });
     toggleDelete.addEventListener('click',()=>{
-        DeleteInput(toggleDelete, toggleInsert, insertButton, deleteButton);
+        changeEdit(toggleDelete, toggleInsert, deleteButton, insertButton);
         inputSect.classList.add('dataInputSection');
     });
 
