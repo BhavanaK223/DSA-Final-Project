@@ -20,43 +20,42 @@
     </header>
 </body>
 <main>
-        <section class="ChangeType">
-            <h3>Warning: Any Changes made are permanent</h3>
-            <p>Select one</p>
-            <button type= "button" id="insertToggle" class="insertToggle">Insert</button>
-            <button type= "button" id="deleteToggle" class="deleteToggle">Delete</button>
+    <section class="ChangeType">
+        <h3>Warning: ALL changes made are permanent!</h3>
+        <p>Select one</p>
+        <button type= "button" id="insertToggle" class="insertToggle">Insert</button>
+        <button type= "button" id="deleteToggle" class="deleteToggle">Delete</button>
         </section>
-        <section class="Insertion">
-            <div>
-                <label for="county">County:</label>
-                <input type="text" id="county" name="county"  placeholder="Alachua">
-                <label for="state">State:</label>
-                <input type="text" id="state" name="state"  placeholder="Florida">
-                <button type= "submit" id="insert">Insert</button>
-            </div>
-            <div>
-                <label for="date">Date:</label>
-                <input type="text" id="date" name="date"  placeholder="MM/DD/YYYY">
-                <label for="ozone">AQI:</label>
-                <input type="text" id="ozone" name="ozone"  placeholder="0.1">  
-            </div>
-            
-        </section>
-        <section class="Deletion">
-            <div>
-                <label for="county">County:</label>
-                <input type="text" id="county" name="county"  placeholder="Alachua">
-                <label for="state">State:</label>
-                <input type="text" id="state" name="state"  placeholder="Florida">
-                <button type= "submit" id="delete">Delete</button>
-            </div>
-            <div>
-                <label for="date">Date:</label>
-                <input type="text" id="date" name="date"  placeholder="MM/DD/YYYY">
-                <label for="ozone">AQI:</label>
-                <input type="text" id="ozone" name="ozone"  placeholder="0.1">  
-                
-            </div>
-        </section>
-    </main>
+    <section id="insertSection" class="hidden">
+        <div>
+            <label for="county">County:</label>
+            <input type="text" id="countyInsert" name="county"  placeholder="Alachua">
+            <label for="state">State:</label>
+            <input type="text" id="stateInsert" name="state"  placeholder="Florida">
+            <button type= "submit" id="insert">Insert</button>
+         </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="text" id="dateInsert" name="date"  placeholder="MM/DD/YYYY">
+            <label for="aqiInsert">AQI:</label>
+            <input type="text" id="aqiInsert" name="aqi"  placeholder="0.1">  
+        </div>    
+    </section>
+     <section id="deleteSection" class="hidden">
+        <div>
+            <label for="county">County:</label>
+            <input type="text" id="countyDelete" name="county"  placeholder="Alachua">
+            <label for="state">State:</label>
+            <input type="text" id="stateDelete" name="state"  placeholder="Florida">
+            <button type= "submit" id="delete">Delete</button>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="text" id="dateDelete" name="date"  placeholder="MM/DD/YYYY">
+            <label for="aqiDelete">AQI:</label>
+            <input type="text" id="aqiDelete" name="aqiDelete"  placeholder="0.1">         
+        </div>
+    </section>
+    <script src="dataEdit.js"></script>
+</main>
 </html>

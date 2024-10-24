@@ -7,6 +7,10 @@
     font-family: 'JetBrains Mono', monospace;
 }
 
+.hidden{
+    display: none;
+}
+
 /* NAVIGATION */
 header{
     position: fixed;
@@ -47,12 +51,11 @@ body{
 
 }
 
-
 section{
     width: 100%;
     padding: 20px 100px;
 }
-
+/*=====> HOME PAGE <======*/
 .searchSection{
     height: 10em;
     display: flex;
@@ -69,7 +72,7 @@ section{
     margin: 4em 0 0;
 }
 
-/*Edit Data Page*/
+/*=====> EDIT DATA PAGE <======*/
 .ChangeType{
     padding: 1em 40px 2em;
 }
@@ -94,7 +97,8 @@ section{
     padding: 5px 10px;
 }
 
-/*Reference Page*/
+
+/*=====> REFERENCE PAGE <======*/
 .references {
     justify-content:left;
     align-items: center;
@@ -149,13 +153,13 @@ button{
     
 }
 
-.deleteToggle:active{
+.deleteToggle.active{
     background-color: transparent;
     color:#F24822;
     border: 2px dashed #F24822;
 }
 
-.insertToggle:active{
+.insertToggle.active{
     background-color: transparent;
     color: #96E078;
     border: 2px dashed #96E078;
