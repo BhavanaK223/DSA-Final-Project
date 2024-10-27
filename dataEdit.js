@@ -35,9 +35,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         button2.classList.add('hidden');
     }
 
-    
-
-    //Event Listeners
+    //Event
     toggleInsert.addEventListener('click',()=>{
         changeEdit(toggleInsert, toggleDelete, insertButton, deleteButton);
         inputSect.classList.add('dataInputSection');
