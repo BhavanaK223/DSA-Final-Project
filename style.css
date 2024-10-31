@@ -59,19 +59,19 @@ section{
 .searchSection{
     justify-content: center;
 }
-.searchTitle{
+.searchTitle {
     justify-items: center;
     margin: 20px 20px 20px 20px;
 }
-
 .searchInput{
-    position: relative;
+    justify-items: center;
     margin: 20px 20px 20px 20px;
+    padding-top: 20px;
 }
 
 .searchInput input{
-    width: 20em;
-    padding-right: 40px;
+   width: 100%;
+   
 }
 /* .searchSectionTitle{
     justify-self: center;
