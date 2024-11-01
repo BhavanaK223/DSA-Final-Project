@@ -58,39 +58,23 @@ section{
 /*=====> HOME PAGE <======*/
 .searchSection{
     justify-content: center;
+    align-items: center;
 }
 .searchTitle {
     justify-items: center;
     margin: 20px 20px 20px 20px;
 }
 .searchInput{
-    justify-items: center;
-    margin: 20px 20px 20px 20px;
-    padding-top: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .searchInput input{
    width: 100%;
-   
 }
-/* .searchSectionTitle{
-    justify-self: center;
-    align-items: center;
-}   
-.searchSection input{
-    justify-content: center;
-    align-items: center;
-} */
-/* .searchSection h2{
-    justify-self: center;
-    margin: 0 20px 20px;
-}
-.searchSection p{
-    margin: 0 30px 10px;
-}
-.searchSection button{
-    margin: 4em 0 0;
-} */
+
 
 /*=====> EDIT DATA PAGE <======*/
 .ChangeType{
