@@ -78,16 +78,20 @@ section{
 
 /*=====> EDIT DATA PAGE <======*/
 .ChangeType{
-    padding: 1em 40px 2em;
+    justify-items: center;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
 }
 .dataInputSection{
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
     justify-content: center;
-    padding: 0 20px 0;
+    align-items: center;
 }
 .dataInputSection label{
-    margin: 25px 20px 0px;
-    padding: 5px 10px;
+    width: 100%;
+    /* margin: 25px 20px 0px;
+    padding: 5px 10px; */
 }
 
 /*=====> REFERENCE PAGE <======*/
@@ -119,19 +123,18 @@ input[type="text"]{
     height: 3em;
     width: 20em;
     font-size: 1em;
-    margin: 10px 20px 25px;
-    padding: 0 20px;
+    margin: 20px 25px;
+    padding: 10px 20px;
     border-radius: 1em;
     border: none;
     background-color: #D5F0F0;
     color:#413C58;
 }
 
-
 /* BUTTONS */
 button{
     padding: 10px 20px;
-    margin: 10px;
+    margin: 20px 25px;
     border: 2px dashed transparent;
     border-radius: 1em;
     height: 3.5em;
