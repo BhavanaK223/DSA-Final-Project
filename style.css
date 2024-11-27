@@ -78,21 +78,22 @@ section{
 
 
 /*=====> EDIT DATA PAGE <======*/
+.editSection{
+    justify-content: center;
+    align-items: center;
+}
 .ChangeType{
     justify-items: center;
-    align-items: center;
     margin: 20px 20px 20px 20px;
 }
 .dataInputSection{
     display: inline-flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .dataInputSection label{
     width: 100%;
-    /* margin: 25px 20px 0px;
-    padding: 5px 10px; */
 }
 
 /*=====> REFERENCE PAGE <======*/
