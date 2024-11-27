@@ -12,9 +12,6 @@
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded',()=>{ 
     //buttons and sections
     const toggleInsert = document.getElementById('insertToggle');
