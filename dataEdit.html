@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Page where users can input/delete data from the database-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,8 @@
     <header>
         <div class="logoContainer">
             <img src="hash-browns.png" alt="Hashbrown Logo" class="logo">
-        </div>        
+        </div>  
+         <!-- navigation bar      -->
         <nav> 
             <a href="index.html" data-name="Home">Home</a>
             <a href="dataEdit.html" data-name="Data">Edit Data</a>
@@ -21,12 +23,14 @@
 </body>
 <main>
     <section class="editSection">
+        <!--Toggle Button between Insert/Delete Data-->
     <section class="ChangeType">
         <h3>Warning: ALL changes made are permanent!</h3>
         <p>Select one</p>
         <button type= "button" id="insertToggle" class="insertToggle">Insert</button>
         <button type= "button" id="deleteToggle" class="deleteToggle">Delete</button>
     </section>
+    <!--Form for Inserting/Deleting Data-->
     <form id="inputSection" class="hidden">
         <div>
             <label for="county">County:</label>
