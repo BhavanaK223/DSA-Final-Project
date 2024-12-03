@@ -11,43 +11,49 @@
 // import CloseIcon from '@mui/icons-material/Close';
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Buttons and Sections
+    const elements = {
+        toggleInsert: document.getElementById('insertToggle'),
+        toggleDelete: document.getElementById('deleteToggle'),
+        insertButton: document.getElementById('insert'),
+        deleteButton: document.getElementById('delete'),
+        inputSection: document.getElementById('inputSection'),
+    };
 
-document.addEventListener('DOMContentLoaded',()=>{ 
-    //buttons and sections
-    const toggleInsert = document.getElementById('insertToggle');
-    const toggleDelete = document.getElementById('deleteToggle');
-    const insertButton = document.getElementById('insert');
-    const deleteButton = document.getElementById('delete');
-    const inputSect = document.getElementById('inputSection');
-    
-
-    //Debug
-    console.log(toggleInsert, toggleDelete);
-
-    //Functions
-    function changeEdit(toggle1, toggle2, button1, button2){
-        //toggles
-        toggle1.classList.add('active');
-        toggle2.classList.remove('active');
-        //buttons
-        button1.classList.remove('hidden');
-        button2.classList.add('hidden');
+    // Validate if all required elements exist
+    for (const [key, element] of Object.entries(elements)) {
+        if (!element) {
+            console.error(`Missing element: ${key}`);
+            return; // Exit if any element is not found
+        }
     }
 
-    //Event
-    // if (!toggleInsert || !toggleDelete || !insertButton || !deleteButton || !inputSect) {
-    //     console.error('One or more elements are missing');
-    //     return;
-    // }
-    
-    toggleInsert.addEventListener('click',()=>{
-        changeEdit(toggleInsert, toggleDelete, insertButton, deleteButton);
-        inputSect.classList.add('dataInputSection');
-    });
-    toggleDelete.addEventListener('click',()=>{
-        changeEdit(toggleDelete, toggleInsert, deleteButton, insertButton);
-        inputSect.classList.add('dataInputSection');
+    const { toggleInsert, toggleDelete, insertButton, deleteButton, inputSection } = elements;
+
+    // Functions
+    const changeEdit = (activeToggle, inactiveToggle, activeButton, inactiveButton) => {
+        // Highlight active toggle
+        activeToggle.classList.add('active');
+        inactiveToggle.classList.remove('active');
+
+        // Show/Hide buttons
+        activeButton.classList.remove('hidden');
+        inactiveButton.classList.add('hidden');
+    };
+
+    const handleToggleClick = (activeToggle, inactiveToggle, activeButton, inactiveButton) => {
+        changeEdit(activeToggle, inactiveToggle, activeButton, inactiveButton);
+        inputSection.classList.add('dataInputSection');
+    };
+
+    // Event Listeners
+    toggleInsert.addEventListener('click', () => {
+        handleToggleClick(toggleInsert, toggleDelete, insertButton, deleteButton);
     });
 
+    toggleDelete.addEventListener('click', () => {
+        handleToggleClick(toggleDelete, toggleInsert, deleteButton, insertButton);
+    });
 });
 
